@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="NEURO IA S.A.S. Desarrollamos inteligencia artificial, software, aplicaciones y soluciones digitales para negocios.">
+  <title>NEURO IA S.A.S. — ¿Qué buscas?</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/logo-neuroia.png">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="script.js?v=6" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="NEURO IA, inicio">
+        <img src="assets/logo-neuroia.png" alt="Logotipo de Neuro IA" class="brand-mark">
+        <span class="brand-copy"><strong>NEURO IA</strong><small>S.A.S. · TU SOCIO TECNOLÓGICO</small></span>
+      </a>
+      <div class="topbar-right">
+        <span class="availability"><i></i> Desarrollo y soluciones digitales</span>
+        <button type="button" class="guide-hint-btn" id="showGuideBtn" aria-label="Mostrar guía interactiva">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          <span class="guide-btn-text">Guía</span>
+        </button>
+        <a class="top-cta" id="headerWhatsApp" href="#" target="_blank" rel="noopener">Hablemos <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <section class="hero" id="inicio" aria-labelledby="heroTitle">
+      <div class="hero-main">
+        <p class="eyebrow">INTELIGENCIA ARTIFICIAL · SOFTWARE · INNOVACIÓN</p>
+        <h1 id="heroTitle">¿Qué <em>buscas?</em></h1>
+      </div>
+      <div class="hero-side">
+        <p>Elige tu mejor caso. Diseñamos tecnología que resuelve necesidades reales de tu negocio.</p>
+        <div class="hero-meta-row">
+          <span class="hero-note">Soluciones a tu medida <b>↘</b></span>
+          <div class="carousel-nav-arrows" id="carouselNavArrows" aria-label="Navegación de soluciones">
+            <button class="nav-arrow prev" id="carouselPrevBtn" type="button" aria-label="Ver solución anterior">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <span class="carousel-counter" id="carouselCounter" aria-live="polite">01 / 09</span>
+            <button class="nav-arrow next" id="carouselNextBtn" type="button" aria-label="Ver solución siguiente">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenedor principal de servicios -->
+    <main class="services-wrapper" id="servicesWrapper" aria-label="Selecciona el servicio que necesitas">
+      <!-- 1. Carrusel Infinito para PC / Desktop -->
+      <section class="desktop-carousel-container" id="desktopCarousel" aria-label="Carrusel de servicios para escritorio">
+        <div class="carousel-viewport" id="carouselViewport" tabindex="0" role="region" aria-label="Carrusel deslizable infinito">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Renderizado dinámico infinito desde script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Acordeón de barras verticales para Móvil -->
+      <section class="mobile-accordion-container" id="mobileAccordion" aria-label="Lista de servicios para dispositivos móviles">
+        <div class="mobile-bars-header">
+          <p class="mobile-bars-tip">Toca cualquier opción para desplegar los detalles:</p>
+        </div>
+        <div class="mobile-bars-list" id="mobileBarsList">
+          <!-- Renderizado dinámico de barras desde script.js -->
+        </div>
+      </section>
+
+      <!-- 3. Guía interactiva de mano hecha en Canvas -->
+      <aside class="canvas-hand-guide" id="canvasHandGuide" role="status" aria-live="polite">
+        <div class="guide-card">
+          <button class="guide-close" id="guideClose" type="button" aria-label="Cerrar guía interactiva">×</button>
+          <div class="canvas-box">
+            <canvas id="handCanvas" width="220" height="140"></canvas>
+          </div>
+          <p class="guide-text" id="guideText">Arrastra hacia los lados para explorar</p>
+          <button class="guide-dismiss-pill" id="guideDismissPill" type="button">Entendido</button>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <span>NEURO IA S.A.S. <span class="footer-muted">· Software que impulsa negocios.</span></span>
+      <span class="footer-right">Ecuador <span aria-hidden="true">·</span> <a href="mailto:info@neurochat.com.ec">info@neurochat.com.ec</a></span>
+    </footer>
+  </div>
+
+  <!-- Modal con detalle extendido -->
+  <div class="modal-backdrop" id="infoModal" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar ventana">×</button>
+      <div class="modal-content" id="modalContent"></div>
+    </section>
+  </div>
+</body>
+</html>
